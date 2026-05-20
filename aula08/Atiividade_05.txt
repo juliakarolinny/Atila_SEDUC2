@@ -1,0 +1,43 @@
+
+//
+// Source code recreated from a .class file by IntelliJ IDEA
+// (powered by Fernflower decompiler)
+//
+
+import java.util.Locale;
+import java.util.Scanner;
+
+final class Atiividade_05 {
+    void main() {
+        Locale.setDefault(Locale.US);
+        Scanner leitor = new Scanner(System.in);
+        System.out.print("Digite o seu peso (kg): ");
+        double peso = leitor.nextDouble();
+        System.out.print("Digite a sua altura (m): ");
+        double altura = leitor.nextDouble();
+        double imc = peso / (altura * altura);
+        String classificacao = "";
+        if (imc < (double)16.0F) {
+            classificacao = "Magreza grave";
+        } else if (imc < (double)17.0F) {
+            classificacao = "Magreza moderada";
+        } else if (imc < (double)18.5F) {
+            classificacao = "Magreza leve";
+        } else if (imc < (double)25.0F) {
+            classificacao = "Saudável";
+        } else if (imc < (double)30.0F) {
+            classificacao = "Sobrepeso";
+        } else if (imc < (double)35.0F) {
+            classificacao = "Obesidade Grau I";
+        } else if (imc < (double)40.0F) {
+            classificacao = "Obesidade Grau II (severa)";
+        } else {
+            classificacao = "Obesidade Grau III (mórbida)";
+        }
+
+        System.out.println("\n--- RESULTADO ---");
+        System.out.printf("Seu IMC é: %.2f%n", imc);
+        System.out.println("Classificação: " + classificacao);
+        leitor.close();
+    }
+}
